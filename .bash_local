@@ -1,7 +1,7 @@
-CDATBUILDS="/usr/local/uvcdat"
+CDATBUILDS="/export/bonfils2/uvcdat"
 fonts=( doom banner big bulbhead digital epic larry3d ogre puffy pyramid small smkeyboard  )
 setpy() {
- source ${CDATBUILDS}/$1/bin/setup_cdat.sh
+ source ${CDATBUILDS}/$1/bin/setup_runtime.sh
 }
 
 alias gst='git status'

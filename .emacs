@@ -51,14 +51,14 @@
   ;; If there is more than one, they won't work right.
  )
 ;;; Modification du load-path
-(setq load-path (cons "/Users/doutriaux1/emacs" load-path))
+(setq load-path (cons "/export/bonfils2/emacs" load-path))
 
 ;; cmake
-(require 'cmake-mode)
-(setq auto-mode-alist
-(append '(("CMakeLists\\.txt\\'" . cmake-mode)
-         ("\\.cmake\\'" . cmake-mode))
-         auto-mode-alist))
+;(require 'cmake-mode)
+;(setq auto-mode-alist
+;(append '(("CMakeLists\\.txt\\'" . cmake-mode)
+;         ("\\.cmake\\'" . cmake-mode))
+;         auto-mode-alist))
 
 ;; python mode stuff
 
