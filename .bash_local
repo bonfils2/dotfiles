@@ -1,8 +1,9 @@
+#!/bin/bash
 CDATBUILDS="/export/bonfils2/uvcdat"
 fonts=( doom banner big bulbhead digital epic larry3d ogre puffy pyramid small smkeyboard  )
 h=`hostname -s`
 ANDROIDPATH=""
-#case "$h" in
+case "$h" in
   aure*)
      CDATBUILDS="/export/bonfils2/uvcdat";;
   *bonfi*)
