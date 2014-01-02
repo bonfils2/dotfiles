@@ -66,13 +66,36 @@
     (setq interpreter-mode-alist (cons '("python" . python-mode)
                                        interpreter-mode-alist))
     (autoload 'python-mode "python-mode" "Python editing mode." t)
+>>>>>>> charles/master
 
 ;; In XEmacs syntax highlighting should be enabled automatically.  en GNU
 ;; Emacs you may have to add these lines to your ~/.emacs file:
     (global-font-lock-mode t)
     (setq font-lock-maximum-decoration t)
+
+;; Packages stuff
+
 (require 'package)
 (add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
+;; python mode stuff
+
+    (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
+    (setq interpreter-mode-alist (cons '("python" . python-mode)
+                                       interpreter-mode-alist))
+    (autoload 'python-mode "python-mode" "Python editing mode." t)
+
+;; cmake
+(require 'cmake-mode)
+(setq auto-mode-alist
+(append '(("CMakeLists\\.txt\\'" . cmake-mode)
+         ("\\.cmake\\'" . cmake-mode))
+         auto-mode-alist))
+;; after copy Ctrl+c in X11 apps, you can paste by `yank' in emacs
+(setq x-select-enable-clipboard t)
+
+;; after mouse selection in X11, you can paste by `yank' in emacs
+(setq x-select-enable-primary t)
